@@ -10,5 +10,6 @@ app.get("/", (req, res) => {
     res.json("Hello world!")
 })
 
+app.use("/", arithmeticRoutes);
 
 module.exports = app;
