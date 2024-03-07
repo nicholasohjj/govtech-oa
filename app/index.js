@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
-
+import { addOperation, subtractOperation} from '../services/arithmetic'
 const App = () => {
-  const [number1, setNumber1] = useState("");
-  const [number2, setNumber2] = useState("");
+  const [number1, setNumber1] = useState();
+  const [number2, setNumber2] = useState();
   const [result, setResult] = useState(null);
 
-  const handleOperation(operation) => {
+  const handleOperation = async(operation) => {
+    console.log("Number 1", number1)
+    
+    try {
+        throw new Error("Error!")
+        //const data = await operation == 'add' ? addOperation(number1, number2) : subtractOperation(number1, number2)   
+    } catch (error) {
+        alert(number1 + number2)
+    }
     //do this
   }
 
